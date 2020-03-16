@@ -1,23 +1,25 @@
 {% extends 'layout/head.html' %}
-{% block title %}KIOSQUE{% endblock %}
+{% block title %}RECHERCHE{% endblock %}
 {% load static %}
 {% block breadcrumb %}
 		<nav aria-label="breadcrumb">
   			<ol class="breadcrumb">
     			<li class="breadcrumb-item"><a class = "lien" href="{% url 'accueil' %}">Accueil</a></li>
-    			<li class="breadcrumb-item active">KIOSQUE</li>
+				<li class="breadcrumb-item"><a class="lien" href="{% url 'KIOSQUE:kiosque' %}">KIOSQUE</a></li>
+    			<li class="breadcrumb-item active">RECHERCHE</li>
   			</ol>
 		</nav>
 		{% endblock %}
 {% block body %}
-	<!--{% include 'KIOSQUE/recherche_form.html' %}
+{% include 'KIOSQUE/recherche_form.html' %}
+	<center><h4>{{ results }}</h4></center>
 	{% for resto in page_obj %}
 	<span>
-		<a href="details/{{resto.id}}">
+		<a href="../details/{{resto.id}}">
 			<button class="btn table-primary bouton">
 				<h2>{{ resto.name }}</h2>
 				<div>
-					<img class="resto-img" src="{{ resto.image }}" width="100%" height="100%">
+					<img class="resto-img img-responsive" src="{{ resto.image }}" width="100%" height="100%">
 				</div>
 				<br>
 				<div>
@@ -31,6 +33,5 @@
 	</span>
 	{% endfor %}
 
-	{% include 'KIOSQUE/pagination.html' %}-->
-	page des livres !
+	{% include 'KIOSQUE/pagination.html' %}
 {% endblock %}

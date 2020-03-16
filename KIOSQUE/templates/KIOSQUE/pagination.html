@@ -1,0 +1,22 @@
+{% load static %}
+<<div class="pagination">
+    <span class="step-links tableau5">
+        <span class="tableau5">
+            {% if page_obj.has_previous %}
+                <a href="?page=1"><button class="btn btn-primary bouton-pagination">&laquo; premi&egrave;re</button></a>
+            <a href="?page={{ page_obj.previous_page_number }}"><button class="btn btn-primary bouton-pagination">< pr&eacute;c&eacute;dante</button></a>
+            {% endif %}
+        </span>
+
+        <span class="current tableau5">
+            <span class="page-bouton">Page {{ page_obj.number }}/{{ page_obj.paginator.num_pages }}</span>
+        </span>
+
+        <span class="tableau5">
+            {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}"><button class="btn btn-primary bouton-pagination">suivante ></button></a>
+            <a href="?page={{ page_obj.paginator.num_pages }}"><button class="btn btn-primary bouton-pagination">derni&egrave;re &raquo;</button></a>
+            {% endif %}
+        </span>
+    </span>
+</div>
