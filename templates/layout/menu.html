@@ -1,0 +1,18 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #74D0F1;">
+  <a class="nav-link brand accueil" href="{% url 'accueil' %}"><img class="image_menu" src = "{% static 'medias/images/photo_alexandre_petit.png' %}"/><span class="sr-only">(current)</span></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link brand accueil lien" href="{% url 'accueil' %}">ACCUEIL <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link brand lien" href="{% url 'KIOSQUE:kiosque' %}">KIOSQUE</a>
+      </li>
+    </ul>
+  </div>
+</nav>

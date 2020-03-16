@@ -1,0 +1,170 @@
+.fond {
+    background-color: #A9EAFE;
+}
+.page{
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 15px;
+    padding: 5%;
+    background-color: #FFFFFF;
+    margin-top: 15px;
+}
+.lien{
+    padding: 10px;
+}
+.lien:hover{
+    background-color: #A9EAFE;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.breadcrumb{
+    margin-top: 15px;
+    padding: 15px;
+    background-color: white;
+    vertical-align: middle;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    content: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPjxwYXRoIGQ9Ik0yLjUgMEwxIDEuNSAzLjUgNCAxIDYuNSAyLjUgOGw0LTQtNC00eiIgZmlsbD0iY3VycmVudENvbG9yIi8+PC9zdmc+) !important;
+}
+.resto-img{
+    box-sizing:border-box;
+    box-shadow:10px 10px 8px rgba(38, 196, 236, 1.0);
+    border-left:3px solid #74D0F1;
+    border-right:3px solid #74D0F1;
+    border-top:3px solid #A9EAFE;
+    border-left:3px solid #A9EAFE;
+}
+.bouton{
+    width: 30%;
+    margin-left:2%;
+}
+.bouton_details{
+    width: 100%;
+}
+.images{
+    float: right;
+    position: relative;
+    right: 5%;
+    box-sizing:border-box;
+    box-shadow:10px 10px 8px rgba(92, 92, 92, 1.0);
+    border-bottom:2px solid black;
+    border-right:2px solid black;
+    border-top:2px solid #5C5C5C;
+    border-left:2px solid #5C5C5C;
+}
+.presentation{
+    box-sizing: border-box;
+    margin-left: 0.75%;
+    margin-right: 0.75%;
+    margin-top: 0.75%;
+    background-color: #74D0F1;
+    border-radius: 20px;
+    padding: 1%;
+    border:2px solid blue;
+    line-height:20px;
+    letter-spacing:0.01925em;
+    margin-bottom: 2.5%;
+    clear:both;
+}
+.image_menu {
+    display:flex;
+    width: 20px;
+    height: 20%;
+}
+.portrait{
+    width: 10%;
+    height: 10%;
+    float: left;
+    margin-right: 2%;
+    margin-bottom: 10px;
+    box-sizing:border-box;
+    box-shadow:10px 10px 8px rgba(49, 140, 231, 1.0);
+    border-bottom:3px solid blue;
+    border-right:3px solid blue;
+    border-top:3px solid #1E7FCB;
+    border-left:3px solid #1E7FCB;
+}
+.head-accueil{
+    display: flex;
+    justify-content: center;
+}
+.tableau1{
+    box-sizing:border-box;
+    border-radius:25px;
+    width:25%;
+    margin:5px;
+    padding:5px;
+    font-family:verdana;
+    box-align:left;
+    text-align:center;
+}
+.tableau2{
+    box-sizing:border-box;
+    border-radius:30px;
+    width:30%;
+    font-family:verdana;
+    box-align:left;
+    text-align:center;
+}
+.tableau1, .tableau2{
+    float:left;
+}
+.tableau{
+    box-sizing:border-box;
+    color:blue;
+    border-radius:30px;
+    background-color:#26C4EC;
+    width:50%;
+    margin-left:25%;
+    margin-bottom:15px;
+    padding:5px;
+    font-family:verdana;
+    font-weight:bold;
+    box-align:center;
+    text-align:center;
+}
+.tableau3{
+    box-sizing:border-box;
+    margin-bottom:20px;
+    margin-left:25%;
+    width:50%;
+    font-family:verdana;
+    box-align:center;
+    text-align:center;
+}
+.tableau4{
+    box-sizing:border-box;
+    color:white;
+    border-radius:30px;
+    background-color:#26C4EC;
+    width:100%;
+    margin-bottom:15px;
+    padding:5px;
+    font-family:verdana;
+    font-weight:bold;
+    box-align:center;
+    text-align:center;
+}
+.tableau5{
+    box-sizing:border-box;
+    color:blue;
+    width:100%;
+    margin-bottom:15px;
+    padding:5px;
+    font-family:verdana;
+    font-weight:bold;
+    box-align:center;
+    text-align:center;
+}
+.bouton-pagination{
+    width:12%;
+}
+.page-bouton{
+    box-sizing:border-box;
+    color:blue;
+    background-color:white;
+    border:2px solid blue;
+    padding:5px;
+}

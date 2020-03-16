@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>{% block title %}{% endblock %}</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width = device-width, initial-scale = 1.0">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="{% static 'fichiers/CSS/styles.css' %}">
+		<link rel="shortcut icon" type="image/png" href="{% static 'medias/images/photo_alexandre_petit.png' %}">
+		<script src="https://kit.fontawesome.com/8b420c83a1.js" crossorigin="anonymous"></script>
+	</head>
+	<body class="fond">
+		{% include 'layout/menu.html' %}
+		{% block breadcrumb %}
+		<nav aria-label="breadcrumb">
+  			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="{% url 'accueil' %}"><img class = "portrait" src = "{% static 'images/photo_alexandre_petit.png' %}"/></a></li>
+    			<li class="breadcrumb-item"><a href="{% url 'accueil' %}">Accueil</a></li>
+    			<li class="breadcrumb-item active"><a href="{% url 'RESTAURANTS:restaurants' %}">RESTAURANTS</a></li>
+  			</ol>
+		</nav>
+		{% endblock %}
+		{% block body %}{% endblock %}
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	</body>
+</html>
