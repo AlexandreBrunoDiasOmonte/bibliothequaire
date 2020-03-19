@@ -6,7 +6,7 @@ from .models import Auteur, Livre, Utilisateur, Editeur, Reservation, Genre
 class LivreAdmin(admin.ModelAdmin):
     list_filter = ['genre', 'auteur', 'editeur']
     search_fields = ['titre', 'genre', 'auteur', 'editeur']
-    list_display = ['titre', 'auteur', 'genre', 'parution']
+    list_display = ['titre', 'auteur', 'genre', 'publication']
     list_per_page = 10
     ordering = ['titre']
 
@@ -24,8 +24,10 @@ class AuteurAdmin(admin.ModelAdmin):
     search_fields = ['name', 'userName']
     list_display = ['name', 'userName']
     list_per_page = 10
-    if 'userName' == "":
-        ordering = ["name"]
+    if Auteur.name and Auteur.userName:
+        ordering = ['name']
+    elif Auteur.name and not Auteur.userName:
+        ordering = ['name']
     else:
         ordering = ['userName']
 
@@ -38,12 +40,12 @@ class EditeurAdmin(admin.ModelAdmin):
     ordering = ['name']
 
 
-@admin.register(Reservation)
-class ReservationAdmin(admin.ModelAdmin):
-    search_fields = ['utilisateur_id', 'reserved']
-    list_display = ['utilisateur_id', 'reserved', 'created_at']
-    list_per_page = 10
-    ordering = ['-created_at']
+# @admin.register(Reservation)
+# class ReservationAdmin(admin.ModelAdmin):
+#     search_fields = ['utilisateur', 'reserved']
+#     list_display = ['utilisateur', 'reserved', 'created_at']
+#     list_per_page = 10
+#     ordering = ['-created_at']
 
 
 @admin.register(Genre)

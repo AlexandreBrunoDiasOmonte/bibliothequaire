@@ -13,20 +13,13 @@
 {% block body %}
 {% include 'KIOSQUE/recherche_form.html' %}
 	<center><h4>{{ results }}</h4></center>
-	{% for resto in page_obj %}
+	{% for kiosque in page_obj %}
 	<span>
-		<a href="../details/{{resto.id}}">
+		<a href="../details/{{kiosque.id}}">
 			<button class="btn table-primary bouton">
-				<h2>{{ resto.name }}</h2>
+				<h2>{{ kiosque.titre }}</h2>
 				<div>
-					<img class="resto-img img-responsive" src="{{ resto.image }}" width="100%" height="100%">
-				</div>
-				<br>
-				<div>
-					<h5><a href="tel:{{ resto.phone }}">{{ resto.phone }}</a></h5>
-				</div>
-				<div>
-					<h4>{{ resto.ville }}</h4>
+					<img class="kiosque-img img-responsive" src="{{ kiosque.couverture }}" width="100%" height="100%">
 				</div>
 			</button>
 		</a>

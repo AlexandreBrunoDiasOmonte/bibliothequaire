@@ -28,7 +28,7 @@
 .breadcrumb-item + .breadcrumb-item::before {
     content: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPjxwYXRoIGQ9Ik0yLjUgMEwxIDEuNSAzLjUgNCAxIDYuNSAyLjUgOGw0LTQtNC00eiIgZmlsbD0iY3VycmVudENvbG9yIi8+PC9zdmc+) !important;
 }
-.resto-img{
+.kiosque-img{
     box-sizing:border-box;
     box-shadow:10px 10px 8px rgba(38, 196, 236, 1.0);
     border-left:3px solid #74D0F1;
