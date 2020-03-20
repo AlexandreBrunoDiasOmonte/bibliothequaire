@@ -53,7 +53,6 @@ class Livre(models.Model):
     genre = models.ForeignKey(Genre, on_delete=models.CASCADE)
     editeur = models.ManyToManyField(Editeur, related_name="livres")
     auteur = models.ForeignKey(Auteur, on_delete=models.CASCADE)
-    # Reservation = models.ForeignKey(Reservation, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.titre
@@ -62,4 +61,3 @@ class Livre(models.Model):
 class Reservation(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     reserved = models.BooleanField('Réservé ?', default=False)
-    # utilisateur = models.ForeignKe

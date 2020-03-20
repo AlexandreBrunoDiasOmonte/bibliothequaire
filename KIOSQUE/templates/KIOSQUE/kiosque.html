@@ -5,7 +5,7 @@
 		<nav aria-label="breadcrumb">
   			<ol class="breadcrumb">
     			<li class="breadcrumb-item"><a class = "lien" href="{% url 'accueil' %}">Accueil</a></li>
-    			<li class="breadcrumb-item active">KIOSQUE</li>
+    			<li class="breadcrumb-item active">LIVRES</li>
   			</ol>
 		</nav>
 		{% endblock %}
@@ -15,7 +15,7 @@
 	<span>
 		<a href="details/{{kiosque.id}}">
 			<button class="btn table-primary bouton">
-				<h2>{{ kiosque.titre }}</h2>
+				<h3>{{ kiosque.titre }}</h3>
 				<div>
 					<img class="kiosque-img" src="{{ kiosque.couverture }}" width="100%" height="100%">
 				</div>
@@ -26,5 +26,4 @@
 	{% endfor %}
 
 	{% include 'KIOSQUE/pagination.html' %}
-	page des livres !
 {% endblock %}

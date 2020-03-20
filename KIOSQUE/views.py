@@ -24,14 +24,16 @@ def recherche(request):
         livres = Livre.objects.all().order_by('titre')
     else:
         # title contains the query is and query is not sensitive to case.
-        livres = Livre.objects.filter(name__icontains=query).order_by('titre')
+        livres = Livre.objects.filter(titre__icontains=query).order_by('titre')
     if not livres.exists():
-        restos = Livre.objects.filter(ville__icontains=query).order_by('titre')
-    if not restos.exists():
-        restos = Livre.objects.filter(codePostal__icontains=query).order_by('titre')
+        livres = Livre.objects.filter(auteur__icontains=query).order_by('titre')
+    if not livres.exists():
+        livres = Livre.objects.filter(editeur__icontains=query).order_by('titre')
+    if not livres.exists():
+        livres = Livre.objects.filter(genre__icontains=query).order_by('titre')
     results = "Résultats pour la requête < %s >" % query
 
-    paginator = Paginator(restos, 9)
+    paginator = Paginator(livres, 9)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     context = {
