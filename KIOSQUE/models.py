@@ -51,7 +51,7 @@ class Livre(models.Model):
     couverture = models.URLField('Image de courverture', blank=True)
     resume = models.TextField('Résumé', blank=True)
     genre = models.ForeignKey(Genre, on_delete=models.CASCADE)
-    editeur = models.ManyToManyField(Editeur, related_name="livres")
+    editeur = models.ForeignKey(Editeur, on_delete=models.CASCADE)
     auteur = models.ForeignKey(Auteur, on_delete=models.CASCADE)
 
     def __str__(self):
