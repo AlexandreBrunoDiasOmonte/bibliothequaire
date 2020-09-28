@@ -10,19 +10,15 @@
 		</nav>
 		{% endblock %}
 {% block body %}
-	{% include 'KIOSQUE/recherche_form.html' %}
 	{% for kiosque in page_obj %}
-	<span>
 		<a href="details/{{kiosque.id}}">
 			<button class="btn table-primary bouton">
 				<h3>{{ kiosque.titre }}</h3>
 				<div>
-					<img class="kiosque-img" src="{{ kiosque.couverture }}" width="100%" height="100%">
+					<img class="kiosque-img" src="{{ kiosque.couverture }}" width="248" height="385">
 				</div>
-				<br>
 			</button>
 		</a>
-	</span>
 	{% endfor %}
 
 	{% include 'KIOSQUE/pagination.html' %}

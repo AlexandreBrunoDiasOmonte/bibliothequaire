@@ -1,18 +1,22 @@
 {% load static %}
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #74D0F1;">
-  <a class="nav-link brand accueil" href="{% url 'accueil' %}"><img class="image_menu" src = "{% static 'medias/images/photo_alexandre_petit.png' %}"/><span class="sr-only">(current)</span></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <a class="nav-link brand accueil" href="{% url 'accueil' %}"><img class="image_menu" src = "{% static 'medias/images/photo_alexandre_petit.png' %}"/><span class="sr-only">(current)</span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link brand accueil lien" href="{% url 'accueil' %}">ACCUEIL <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link brand lien" href="{% url 'KIOSQUE:kiosque' %}">LIVRES</a>
-      </li>
-    </ul>
-  </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link brand accueil lien" href="{% url 'accueil' %}">ACCUEIL <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link brand lien" href="{% url 'KIOSQUE:kiosque' %}">LIVRES</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0" action="{% url 'KIOSQUE:recherche' %}" method="get" accept-charset="utf-8">
+            <input id="searchForm" class="form-control mr-sm-2" name="query">
+            <button class="btn btn-primary" method="."><i class="fas fa-search"></i></button>
+    </form>
+    </div>
 </nav>

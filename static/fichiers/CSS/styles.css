@@ -30,7 +30,7 @@
 }
 .kiosque-img{
     box-sizing:border-box;
-    box-shadow:10px 10px 8px rgba(38, 196, 236, 1.0);
+    box-shadow:10px 10px 8px rgba(116, 208, 241, 1.0);
     border-left:3px solid #74D0F1;
     border-right:3px solid #74D0F1;
     border-top:3px solid #A9EAFE;
@@ -39,6 +39,11 @@
 .bouton{
     width: 30%;
     margin-left:2%;
+}
+.bouton:hover{
+    box-sizing:border-box;
+    box-shadow:0px 10px 10px 3px #74D0F1;
+    background-color: #74D0F1;
 }
 .bouton_details{
     width: 100%;

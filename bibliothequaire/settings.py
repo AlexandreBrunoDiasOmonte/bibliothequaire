@@ -24,7 +24,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '@ahq!!eei3rt&dal=fau1)^(v_a4*-@m23s$-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['palace-livres.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 # Application definition
 
